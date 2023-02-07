@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+body{
+    background-color: rgba(5, 179, 202, 0.342)
+}
+.container{
+    text-align: center;
+    padding: 0;
+    transition: .5s;
+    padding: 4rem 5% 0 5%;
+
+}
+h2{
+    font-size: 60px;
+    font-family: 'Rubik Dirt', cursive;
+    word-spacing: 20px;
+}
+.d-none{
+    border: none !important;
+    background: #fff !important;
+    color: #fff !important;
+}
+
+.restart-game{
+    transition: .1s;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    border: none !important;
+    border: 5px solid rgba(238, 255, 1, 0.603);
+    background-color: rgba(240, 216, 6, 0.781);
+    color: rgb(0, 0, 0);
+}
+.restart-game:hover{
+    border: 1px solid rgba(0, 0, 0, 0.603) !important;
+    transform: scale(1.1);
+    background-color: rgba(238, 255, 1, 0.349);
+}
+.row-score{
+    margin: 3rem 0;
+}
+.row p{
+    margin: 0 !important;
+    margin: .5rem auto !important;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Concert One', cursive;
+}
+h4{
+    margin-top: 7vh;
+    font-size: 50px;
+    font-family: 'Concert One', cursive;
+}
+.result{
+    margin: 2rem;
+}
+.result-text{
+    font-family: 'Concert One', cursive;
+    color: #fff;
+    padding: 10px;
+}
+.selection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    padding: 0;
+}
+.box{
+    width: 250px;
+    border: 1px solid #000;
+    height: 250px;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: .4s;
+}
+.box i{
+    display: inline-block;
+    padding: 2rem auto;
+    transition: .5s;
+}
+
+.box:active i{
+    animation-name: animation-lg;
+    animation-timing-function: ease-out;
+    animation-duration: .1s;
+}
+.box:hover{
+    box-shadow: 0 0 7px #000;
+    cursor: pointer;
+}
+.overall-score-body{
+    font-family: 'Concert One', cursive;
+    font-size: 25px;
+}
+.btns{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+.btn-footer{ 
+    display: flex;
+    justify-content: space-between;
+}
+.btn-footer h5{
+    font-size: 25px;
+}
+.info{
+    display: inline-block;
+    align-items: center;
+    font-size: 30px !important;
+    padding: 0;
+    margin: 0;
+}
+@media (min-width: 300px) and (max-width: 440px){
+    .box{
+        width: 80px;
+        height: 80px;
+        margin: 0.5rem;
+    }
+    .container{
+        padding-top: 2rem;
+    }
+    h2{
+        font-size: 45px;
+    }
+    .box i{
+        font-size: 30px;
+    }
+    .box:active i{
+        animation-name: animation-xs;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+    }
+    .row p {
+        font-size: 18px;
+    }
+    .score > div{
+        display: block;
+    }
+    .row-score{
+        margin: 1rem;
+    }
+    h4{
+        margin-top: 2vh;
+        font-size: 25px;
+    }
+    .result p{
+        font-size: 14px;
+    }
+    .result-text{
+        padding: 5px;
+    }
+}
+@media (min-width: 441px) and (max-width: 576px){
+    .modal-result{
+        display: block;
+        width: 100%;
+        justify-content: center;
+    }
+    .score > div{
+        display: block;
+    }
+    .selection{
+        padding-top: 0;
+    }
+    .row-score{
+        margin: 1rem auto;
+    }
+    .row p {
+        font-size: 20px;
+    }
+    .box i{
+        font-size: 50px;
+    }
+    .box:active i{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    h4{
+        margin-top: 3vh;
+        font-size: 25px;
+    }
+    
+}
+@media (min-width: 441px) and (max-width: 768px){
+    .box{
+        width: 100px;
+        height: 100px;
+        margin: 1rem;
+    }
+    .score > div{
+        display: block;
+    }
+    .box i{
+        font-size: 50px;
+    }
+    .box:active i{
+        font-size: 50px;
+    }
+    .box:active i{
+        animation-name: animation;
+        animation-duration: .7s;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .box{
+        width: 150px;
+        height: 150px;
+        margin: 1rem;
+    }
+    .row p{
+        font-size: 25px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .box{
+        width: 200px;
+        height: 200px;
+        margin: 1rem;
+    }
+
+}
+@media (min-width: 1200px){
+    h2{
+        font-size: 70px;
+    }
+}
+@keyframes animation-xs {
+    0%{
+        font-size: 40px;
+    }
+    50%{
+        font-size: 50px;
+    }
+    100%{
+        font-size: 40px;
+    }
+}
+@keyframes animation {
+    0%{
+        font-size: 50px;
+    }
+    50%{
+        font-size: 70px;
+    }
+    100%{
+        font-size: 50px;
+    }
+}
+@keyframes animation-lg {
+    0%{
+        font-size: 100px;
+    }
+    50%{
+        font-size: 130px;
+    }
+    100%{
+        font-size: 100px;
+    }
+}

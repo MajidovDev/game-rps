@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Game</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./loader.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="ring"></div>
+    </div>
+    <div class="container">
+        <!-- Main game Section -->
+        <div class="wrapper">
+            <h2>Rock Paper Scissors</h2>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Game Round Info:</h3>
+                    <!-- restart game btn -->
+                    <button type="button" id="restart" class="btn d-none btn-danger" data-bs-dismiss="modal">Restart game</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="overall-score-body">
+                            <p>Victory : <span>-</span></p>
+                            <p>Defeat : <span>-</span></p>
+                            <p>Draw : <span>-</span></p>
+                        </div>  
+                    </div>
+                    <div class="btn-footer modal-footer">
+                        <h5>Total rounds: -</h5>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+            <!-- score section -->
+            <div class="score">
+                <div class="score row row-score">
+                    <div class="col">
+                        <p>Player : <span>-</span></p>
+                    </div>
+                    <div class="col">
+                        <p>Draw : <span>-</span></p>
+                    </div>
+                    <div class="col">
+                        <p>Computer : <span>-</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- selection -->
+            <h4>Make Your Selection</h4>
+            <div class="modal-result">
+                <div class="result">
+                    <h1 class="bg-primary result-text rounded-2">Choose your choice</h1>
+                    <p>Computer's action appears here!</p>
+                </div>
+            </div>
+            <!-- selection choices -->
+            <div class="selection">
+                <div class="box">
+                    <i id="grab" class="choice fa fa-hand-grab-o fa-5x"></i>
+                </div>
+                <div class="box">
+                    <i id="stop" class="choice fa fa-hand-stop-o fa-5x"></i>
+                </div>
+                <div class="box">
+                    <i id="scissors" class="choice fa fa-hand-scissors-o fa-5x"></i>
+                </div>
+            </div>
+            <div class="btns info">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-secondary d-none new-round" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    New game
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>    
+</body>
+</html>
